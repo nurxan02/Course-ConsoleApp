@@ -11,10 +11,14 @@ namespace ConsoleAppProject_Course_.Model
         public EducationType EduType { get; set; }
         public Line OnOffline { get; set; }
         public Group GroupNo { get; set; }
-        public Student(string fullname, EducationType edutype, Line onoffline)
+        public Student(string fullname, EducationType edutype)
         {
             FullName = fullname;
             EduType = edutype;
+
+        }
+        public Student(Line onoffline)
+        {
             OnOffline = onoffline;
         }
 

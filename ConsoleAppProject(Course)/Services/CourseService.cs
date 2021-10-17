@@ -13,6 +13,7 @@ namespace ConsoleAppProject_Course_.Services
         public List<Group> Groups => _groups;
 
         public List<Student> _students = new List<Student>();
+        public List<Student> _student1 = new List<Student>();
         public List<Student> Students => _students;
 
         public string CreateGroup(ClassCategory category)
@@ -22,11 +23,12 @@ namespace ConsoleAppProject_Course_.Services
             return group.No;
         }
 
-        public string CreateStudent(string fullname, EducationType edutype, Line onoffline)
+
+        public string CreateStudent(string fullname, EducationType edutype)
         {
-            Student student = new Student(fullname,edutype,onoffline);
+            Student student = new Student(fullname,edutype);
             _students.Add(student);
-            return $"{fullname} {edutype} {onoffline}";
+            return $"{fullname} {edutype}";
         }
 
         public void EditGroups(string No, string newNo)
@@ -92,6 +94,13 @@ namespace ConsoleAppProject_Course_.Services
             {
                 Console.WriteLine(student);
             }
+        }
+
+        public string CreateStudentonoff(Line onoffline)
+        {
+            Student student1 = new Student(onoffline);
+            _students.Add(student1);
+            return $"{onoffline}";
         }
     }
 }

@@ -15,7 +15,8 @@ namespace ConsoleAppProject_Course_.Interfaces
         public void EditGroups(string No, string newNo);
         public void GetGroupStudent(string no);
         public void GetAllStdents();
-        public string CreateStudent(string fullname, EducationType edutype, Line onoffline);
+        public string CreateStudent(string fullname, EducationType edutype);
+        public string CreateStudentonoff(Line onoffline);
 
     }
 }

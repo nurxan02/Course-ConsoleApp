@@ -85,16 +85,21 @@ namespace ConsoleAppProject_Course_.Services
                 switch (edutype)
                 {
                     case 1:
-                        Console.WriteLine(courseService.CreateStudent(studfullname, EducationType.Zemanetli, Line.Online));
+                        Console.WriteLine(courseService.CreateStudent(studfullname, EducationType.Zemanetli));
                         break;
                     case 2:
-                        Console.WriteLine(courseService.CreateStudent(studfullname, EducationType.Zemanetsiz, Line.Offline));
+                        Console.WriteLine(courseService.CreateStudent(studfullname, EducationType.Zemanetsiz));
                         break;
-                    case 3:
-                        Console.WriteLine(courseService.CreateStudent(studfullname, EducationType.Zemanetli, Line.Offline));
+                    default:
                         break;
-                    case 4:
-                        Console.WriteLine(courseService.CreateStudent(studfullname, EducationType.Zemanetsiz, Line.Online));
+                }
+                switch (onofflines)
+                {
+                    case 1:
+                        Console.WriteLine(courseService.CreateStudentonoff(Line.Online));
+                        break;
+                    case 2:
+                        Console.WriteLine(courseService.CreateStudentonoff(Line.Offline));
                         break;
                     default:
                         break;
