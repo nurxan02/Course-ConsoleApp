@@ -9,7 +9,8 @@ namespace ConsoleAppProject_Course_
         static void Main(string[] args)
         {
             Console.WriteLine("***********************");
-            Console.WriteLine("Welcome to the Code Academy");
+            Console.WriteLine("Welcome(Xosh gordox) to the Code Academy");
+            Console.WriteLine("***********************");
             Console.WriteLine();
             int selection;
 
